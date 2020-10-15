@@ -1,0 +1,18 @@
+R 720 480
+NO ./textures/bluestone.xpm
+SO ./textures/colorstone.xpm
+WE ./textures/greystone.xpm
+EA ./textures/wood.xpm
+
+S ./textures/sprite.xpm
+F ./textures/redbrick.xpm
+C 34,113,179
+
+1 1 1 1 1 1 1 1 1 1 1 1
+1 0 0 0 0 1 0 2 0 0 1 1
+1 0 1 1 0 0 2 0 0 1 1 1
+1 0 0 1 0 2 0 0 0 0 W 1
+1 0 1 1 0 0 0 0 0 1 1 1
+1 0 0 0 0 0 0 1 0 0 1 1
+1 1 1 1 0 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1
