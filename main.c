@@ -6,7 +6,7 @@
 /*   By: rgarcia- <rgarcia-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/22 17:08:14 by rgarcia-          #+#    #+#             */
-/*   Updated: 2020/09/22 17:26:45 by rgarcia-         ###   ########.fr       */
+/*   Updated: 2021/02/15 13:55:34 by rgarcia-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ static int	ft_principal_save(t_struct *t)
 	ft_loop_raycast(t);
 	ft_screenshot(t);
 	free(t);
+	t = NULL;
 	return (0);
 }
 
@@ -36,6 +37,7 @@ static int	ft_principal(t_struct *t)
 	mlx_loop_hook(t->mlx_ptr, ft_loop_raycast, t);
 	mlx_loop(t->mlx_ptr);
 	free(t);
+	t = NULL;
 	return (0);
 }
 

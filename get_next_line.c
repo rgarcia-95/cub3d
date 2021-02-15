@@ -6,7 +6,7 @@
 /*   By: rgarcia- <rgarcia-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/22 16:37:38 by rgarcia-          #+#    #+#             */
-/*   Updated: 2020/09/22 17:03:52 by rgarcia-         ###   ########.fr       */
+/*   Updated: 2021/02/15 13:53:09 by rgarcia-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 static int	str_free(char *str, int i)
 {
 	free(str);
+	str = NULL;
 	return (i);
 }
 
@@ -36,9 +37,9 @@ static int	ft_read(int fd, char **temp)
 		if (*temp)
 		{
 			tmp = ft_strdup(*temp);
-			free(*temp);
+			str_free(*temp, 1);
 			*temp = ft_strjoin(tmp, buffer);
-			free(tmp);
+			str_free(tmp, 1);
 		}
 		else
 			*temp = ft_strdup(buffer);
@@ -66,6 +67,7 @@ static char	*ft_find_nl(char **temp)
 		*temp = (char *)ft_strdup(stock_long);
 	}
 	free(stock_long);
+	stock_long = NULL;
 	return (memory);
 }
 
@@ -75,8 +77,10 @@ static char	*ft_join_free(char *s1, char *s2)
 
 	tmp = ft_strdup(s1);
 	free(s1);
+	s1 = NULL;
 	s1 = ft_strjoin(s2, tmp);
 	free(tmp);
+	tmp = NULL;
 	free(s2);
 	s2 = NULL;
 	return (s1);

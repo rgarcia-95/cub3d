@@ -6,11 +6,17 @@
 /*   By: rgarcia- <rgarcia-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/22 19:47:06 by rgarcia-          #+#    #+#             */
-/*   Updated: 2020/09/22 19:47:36 by rgarcia-         ###   ########.fr       */
+/*   Updated: 2021/02/15 13:25:22 by rgarcia-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
+
+static void	ft_frees(char *s)
+{
+	free(s);
+	s = NULL;
+}
 
 static char	*ft_without_spaces(char *buff)
 {
@@ -54,16 +60,16 @@ void		ft_fill_map(t_struct *t, char *buff)
 		t->map_width = size;
 		temp = ft_strdup(aux);
 		t->map_reader = ft_strjoin(temp, "\n");
-		free(temp);
+		ft_frees(temp);
 	}
 	else
 	{
 		if (t->map_width != size)
 			ft_error("El mapa no es rectangular");
 		temp = ft_strjoin(t->map_reader, aux);
-		free(t->map_reader);
+		ft_frees(t->map_reader);
 		t->map_reader = ft_strjoin(temp, "\n");
-		free(temp);
+		ft_frees(temp);
 	}
-	free(aux);
+	ft_frees(aux);
 }

@@ -6,7 +6,7 @@
 /*   By: rgarcia- <rgarcia-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/22 18:18:01 by rgarcia-          #+#    #+#             */
-/*   Updated: 2020/09/22 18:27:41 by rgarcia-         ###   ########.fr       */
+/*   Updated: 2021/02/15 13:37:42 by rgarcia-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,6 +125,7 @@ void		ft_map_reader(t_struct *t, char *argv)
 	{
 		ft_aux_reader_1(t, buff);
 		free(buff);
+		buff = NULL;
 	}
 	ft_aux_reader_1(t, buff);
 	if (buff)

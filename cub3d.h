@@ -6,7 +6,7 @@
 /*   By: rgarcia- <rgarcia-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/21 17:18:18 by rgarcia-          #+#    #+#             */
-/*   Updated: 2020/09/22 19:52:57 by rgarcia-         ###   ########.fr       */
+/*   Updated: 2021/02/15 13:13:36 by rgarcia-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -164,43 +164,34 @@ void			ft_fill_map(t_struct *t, char *buff);
 void			ft_check_map(t_struct *t);
 int				ft_mallocs(t_struct *t);
 int				get_next_line(const int fd, char **line);
-
 int				ft_loop_raycast(t_struct *t);
 void			ft_loop_floor(t_struct *t, int x);
 void			ft_load_textures(t_struct *t);
 void			ft_check_textures(t_struct *t);
-
 void			ft_sprites(t_struct *t);
 void			ft_check_sprites(t_struct *t);
 void			ft_check_pos_sprites(t_struct *t);
-
 int				count_lines(char *str);
 int				check_walls(t_struct *t);
-
 void			ft_movement(t_struct *t);
 void			ft_rotate_up_down(t_struct *t);
 int				ft_mouse(int x, int y, t_struct *t);
-
 int				ft_exit(void);
 void			ft_error(char *s);
 int				ft_key_press(int key, t_struct *t);
 int				ft_key_release(int key, t_struct *t);
-
 char			**ft_split(char const *s, char c);
 size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);
-
 size_t			ft_strlen(const char *s);
 char			*ft_strdup(const char *s1);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strsub(char *str, int start, int len);
 char			*ft_strjoin(char const *s1, char const *s2);
-
 int				ft_isdigit(int c);
 int				ft_atoi(const char *str);
 int				ft_count(long long n, int base_len);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
-
 int				init_sound(t_struct *t);
 int				ft_screenshot(t_struct *t);
 void			ft_init_minimap(t_struct *t);
